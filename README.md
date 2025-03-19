@@ -10,6 +10,7 @@ features such as post categories and deletion.
 Authors:
 - Originally written by Armin Ronacher and the Flask team.
 - Modified by Mark Liffiton / CS 253, Sep 2021.
+- Modified by Kaylee Swickert / CS 253, Mar 2025.
 
 ## License
 
