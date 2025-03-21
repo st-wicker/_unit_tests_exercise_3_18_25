@@ -90,9 +90,11 @@ def show_entries():
 @app.route('/add', methods=['POST'])
 def add_entry():
     """Adds a new post"""
+    print("this happened")
     db = get_db()
     db.execute('INSERT INTO entries (title, category, text) VALUES (?, ?, ?)',
                [request.form['title'], request.form['category'], request.form['text']])
+    print("sql")
     db.commit()
     flash('New entry was successfully posted')
     return redirect(url_for('show_entries'))
@@ -108,8 +110,8 @@ def delete_entry():
     return redirect(url_for('show_entries'))
 
 
-@app.route('/edit', methods=['POST'])
-def edit_entry():
-    """Edits a selected post"""
-    db = get_db()
+# @app.route('/edit', methods=['POST'])
+# def edit_entry():
+#     """Edits a selected post"""
+#     db = get_db()
 
