@@ -106,3 +106,10 @@ def delete_entry():
     db.commit()
     flash('Entry deleted')
     return redirect(url_for('show_entries'))
+
+
+@app.route('/edit', methods=['POST'])
+def edit_entry():
+    """Edits a selected post"""
+    db = get_db()
+

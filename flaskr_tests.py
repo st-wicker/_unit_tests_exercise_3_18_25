@@ -32,8 +32,28 @@ class FlaskrTestCase(unittest.TestCase):
         ), follow_redirects=True)
         assert b'No entries here so far' not in rv.data
         assert b'&lt;Hello&gt;' in rv.data
-        assert b'<strong>HTML</strong> allowed her' in rv.data
+        assert b'<strong>HTML</strong> allowed here' in rv.data
         assert b'A category' in rv.data
+
+    # Attempted writing tests before adding code, got stuck and ultimately had to move on
+
+    # def test_delete(self):
+    #     rv = self.app.post('/add', data=dict(
+    #         title='<Hello>',
+    #         text='<strong>HTML</strong> allowed here',
+    #         category='A category'
+    #     ), follow_redirects=True)
+    #     delete = self.app.post('/delete', data=dict(
+    #
+    #     ))
+    #
+    # def test_edit(self):
+    #     rv = self.app.post('/add', data=dict(
+    #         title='<Hello>',
+    #         text='<strong>HTML</strong> allowed here',
+    #         category='A category'
+    #     ), follow_redirects=True)
+    #     edit = self.app.get('/edit')
 
 
 if __name__ == "__main__":
